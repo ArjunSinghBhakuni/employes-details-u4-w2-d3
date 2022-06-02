@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
+import { Detail } from "./component/Detail";
+import { ShowDetail } from "./component/ShowDetail";
 function App() {
+  const [page, setPage] = useState(true);
+  const [details,setDetails] = useState([])
+
+  const addDetails=(newDetail)=>{
+    
+    console.log(newDetail)
+
+    //setDetails([...details,newDetail])
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => setPage(!page)}>
+        {page ? "Show Emploayes Details" : "Fill Employee Details"}
+      </button>
+      {page ? (
+        <div>
+          <Detail addDetails={addDetails} />
+        </div>
+      ) : (
+        <div>
+          <ShowDetail details={details} />
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "username": "Arjun",
+      "age": 32,
+      "address": "Village Gawlakot PO Bhagtola",
+      "id": 1
+    },
+    {
+      "username": "Arjuns",
+      "age": 43,
+      "address": "Village Gawlakot PO Bhagtola",
+      "id": 2
+    },
+    {
+      "username": "Arjuns",
+      "age": 21,
+      "address": "Village Gawlakot PO Bhagtola",
+      "id": 3
+    },
+    {
+      "age": null,
+      "id": 4
+    },
+    {
+      "age": null,
+      "id": 5
+    }
+  ]
+}
